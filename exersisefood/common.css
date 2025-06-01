@@ -221,3 +221,19 @@ body{
         align-items:space-between;
         list-style:none;
     }
+    .mobile-view-nav-list ul li{
+        padding:1em;
+    }
+
+    .mobile-view-nav-list ul li a{
+        text-decoration:none;
+        font-size:2em;
+        color:var(--light-color);
+        font-weight:100;
+    }
+
+    .mobile-view-nav-list ul li a:hover,
+    .mobile-view-nav-list ul li a:focus{
+        color:var(--primary-color);
+    }
+}
