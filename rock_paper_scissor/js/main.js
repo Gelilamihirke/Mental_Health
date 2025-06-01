@@ -87,5 +87,23 @@ choice.forEach((choiceElement) => {
       userMsg = "User: Scissor";
     }
     resultUserStat.innerHTML = userMsg;
+    console.log("User choice : " + userChoice);
 
-    
+    const result = findAnswer(userChoice, compChoice);
+    resultFinalStat.innerHTML = "Winner: " + result;
+  });
+});
+// Toggle Theme
+document.getElementById("themeToggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+// Play Again (Reset)
+document.getElementById("playAgain").addEventListener("click", () => {
+  userScoreVal.innerText = 0;
+  compScoreVal.innerText = 0;
+  resultUserStat.innerText = "User:";
+  resultCompStat.innerText = "Computer:";
+  resultFinalStat.innerText = "Winner:";
+});
+
