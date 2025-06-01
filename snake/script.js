@@ -110,3 +110,28 @@ function triggerGameOver() {
   finalScoreText.textContent = 'Game Over! Your score: ' + score;
   gameOverOverlay.style.display = 'flex';
 }
+// Keyboard controls
+document.addEventListener('keydown', (e) => {
+  const key = e.key;
+  if (key === 'ArrowUp' && direction !== 'down') direction = 'up';
+  if (key === 'ArrowDown' && direction !== 'up') direction = 'down';
+  if (key === 'ArrowLeft' && direction !== 'right') direction = 'left';
+  if (key === 'ArrowRight' && direction !== 'left') direction = 'right';
+});
+
+// UI controls
+restartBtn.addEventListener('click', init);
+document.getElementById('playAgainBtn').addEventListener('click', () => {
+  document.getElementById('gameOverOverlay').style.display = 'none';
+  init();
+});
+
+difficultySelect.addEventListener('change', () => {
+  gameSpeed = parseInt(difficultySelect.value);
+});
+
+// Replaces window.onload with start screen interaction
+document.getElementById('startBtn').addEventListener('click', () => {
+  startScreen.style.display = 'none';
+  init();
+});
