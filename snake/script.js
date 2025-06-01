@@ -57,3 +57,56 @@ function draw() {
   // Draw food
   drawCell(food.x, food.y, '#D32F2F');
 }
+function update() {
+  const head = { ...snake[0] };
+
+  switch (direction) {
+    case 'right': head.x += 1; break;
+    case 'left': head.x -= 1; break;
+    case 'up': head.y -= 1; break;
+    case 'down': head.y += 1; break;
+  }
+
+  // Wall collision
+  if (
+    head.x < 0 || head.x >= canvas.width / gridSize ||
+    head.y < 0 || head.y >= canvas.height / gridSize
+  ) {
+    triggerGameOver();
+    return;
+  }
+
+  // Self collision
+  if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+    triggerGameOver();
+    return;
+  }
+
+  snake.unshift(head);
+
+  // Eating food
+  if (head.x === food.x && head.y === food.y) {
+    score++;
+    eatSound.play();
+    updateScore();
+    placeFood();
+  } else {
+    snake.pop(); // move forward
+  }
+}
+
+function gameLoop() {
+  if (!isRunning) return;
+  update();
+  draw();
+  setTimeout(() => {
+    animationFrame = requestAnimationFrame(gameLoop);
+  }, gameSpeed);
+}
+
+function triggerGameOver() {
+  isRunning = false;
+  gameOverSound.play();
+  finalScoreText.textContent = 'Game Over! Your score: ' + score;
+  gameOverOverlay.style.display = 'flex';
+}
