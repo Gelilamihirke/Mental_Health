@@ -110,3 +110,60 @@ body{
     border: 1px solid transparent;
     transition: all 100ms ease-in-out;
 }
+.dashboard-btn:hover,
+.dashboard-btn:focus{
+    color:var(--primary-color);
+    background-color: transparent;
+    border-color: var(--primary-color);
+}
+
+
+.mobile-view-nav-cont{
+    transform:translateX(-100%);
+    display:none;
+}
+
+
+@media(max-width:785px){
+    .nav-list-cont{
+        display: none;
+    }
+
+    .header{
+        padding:1.5em 0;
+    }
+
+    .hamBurger{
+        /* position: absolute;
+        top:33px;
+        right:18px; */
+        padding: 0 .35em;
+        width:48px;
+        height:33px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* border:1px solid red; */
+        z-index:200;
+    }
+    
+    .line{
+        width:32px;
+        height:4px;
+        background-color:var(--primary-color);
+        border-radius: 10px;
+        transition: all 700ms ease-in-out;
+    }
+
+    .mid-line-cont{
+        position: relative;
+    }
+    .mid-line2{
+        position: absolute;
+        top:0;
+        left:0;
+    }
+
+    .changetheline1{
+        transform: scale(0);
+    }
