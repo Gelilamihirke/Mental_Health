@@ -195,3 +195,29 @@
         padding: .5em;
     }
 }
+
+
+
+.fade-out{
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+
+.fade-out-2{
+    transform: translateX(+50%);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+.fade-in{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.copy-rights{
+    padding: 1em 0 0 0;
+    text-align: center;
+    font-size: 1.2em;
+}
