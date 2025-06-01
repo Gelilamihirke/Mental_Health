@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header{
+    background-color: #004085;
+    padding: 2vmin 0;
+    font-family: 'Chilanka', cursive;
+}
+
+header h1{
+    text-align: center;
+    font-size: 4em;
+    color: #c1e7e1;
+}
+
+
+    body {
+        background-color: #b0f2df;
+        font-family: 'Baloo Tamma 2', cursive;
+    
+        
+        background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F384917099406385734%2F&psig=AOvVaw1l3sIKeJzPqoR3vXllD4iw&ust=1706645679151000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDvid20g4QDFQAAAAAdAAAAABAJ);
+    
+        
+        background-size: cover;
+    
+        
+        background-position: center;
+    
+        
+        background-attachment: fixed;
+    
+        
+        background-repeat: no-repeat;
+    }
+    
+
+
+.score-board{
+    color: #f09696;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 2vmin;
+}
