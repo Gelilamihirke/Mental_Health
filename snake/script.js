@@ -17,3 +17,43 @@ let score = 0;
 let isRunning = false;
 let gameSpeed = parseInt(difficultySelect.value);
 let animationFrame;
+function init() {
+  snake = [{ x: 5, y: 5 }];
+  direction = 'right';
+  score = 0;
+  isRunning = true;
+  gameSpeed = parseInt(difficultySelect.value);
+  updateScore();
+  placeFood();
+  gameOverOverlay.style.display = 'none';
+  if (animationFrame) cancelAnimationFrame(animationFrame);
+  gameLoop();
+}
+
+function updateScore() {
+  scoreDisplay.textContent = 'Score: ' + score;
+}
+
+function placeFood() {
+  food = {
+    x: Math.floor(Math.random() * (canvas.width / gridSize)),
+    y: Math.floor(Math.random() * (canvas.height / gridSize))
+  };
+}
+
+function drawCell(x, y, color = '#00796B') {
+  ctx.fillStyle = color;
+  ctx.fillRect(x * gridSize, y * gridSize, gridSize - 1, gridSize - 1);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw snake
+  snake.forEach((segment, index) => {
+    drawCell(segment.x, segment.y, index === 0 ? '#004d40' : '#00796B');
+  });
+
+  // Draw food
+  drawCell(food.x, food.y, '#D32F2F');
+}
