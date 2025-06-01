@@ -111,3 +111,92 @@
     align-items: center;
     padding: 1em 0 2em 0;
 }
+
+
+
+.rev{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.container-img{
+    min-width:280px;
+    min-height:280px;
+    background-size: cover;
+    background-color: #1C2B2D88;
+    background-blend-mode:multiply ;
+}
+
+
+.img-1{
+    background-image: url("../Images/exercise-page-img/running.jpg");
+    background-position-x: -60px;
+}
+
+
+.img-2{
+    background-image: url("../Images/exercise-page-img/pilates.jpg");
+}
+
+
+.img-3{
+    background-image: url("../Images/exercise-page-img/yoga.jpg");
+}
+
+
+.img-4{
+    background-image: url("../Images/exercise-page-img/swimming.jpg");
+}
+
+
+.img-5{
+    background-image: url("../Images/exercise-page-img/cycling.jpg");
+    background-position-y: -100px;
+}
+
+
+.img-6{
+    background-image: url("../Images/exercise-page-img/dance.jpg");
+}
+
+
+.img-7{
+    background-image: url("../Images/exercise-page-img/boxing.jpg");
+}
+
+
+.exercise-desp{
+    /* border:1px solid black; */
+    padding: .5em .5em .5em 2em;
+    /* width:85ch; */
+}
+
+
+.exercise-desp h2{
+    padding-bottom: .5em;
+    color:var(--dark-color);
+    position: relative;
+}
+
+.exercise-desp h2::after{
+    content: ' ';
+    position: absolute;
+    top:38%;
+    transform: translate(0,-50%);
+    width:15px;
+    height:15px;
+    background-color: var(--primary-color);
+    margin:0 .3em ;
+}
+
+@media(max-width:800px){
+    .exercise-cont{
+        flex-wrap: wrap;
+    }
+
+    .exercise-desp{
+        padding: .5em;
+    }
+}
+
+
