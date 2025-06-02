@@ -93,3 +93,23 @@ window.onload = function() {
             seconds = 0; 
             attachSeconds.innerHTML = "0" + 0; 
         }
+
+         if (minutes > 9){
+            attachMinutes.innerHTML = minutes;
+        }
+
+        
+        if (minutes > 59){
+            console.log("hours"); 
+            hours++; 
+            attachHours.innerHTML = "0" + hours; 
+            minutes = 0; 
+            attachMinutes.innerHTML = "0" + 0; 
+        }
+
+        if (hours > 9){
+            attachHours.innerHTML = hours;
+        }
+    }
+}
+
