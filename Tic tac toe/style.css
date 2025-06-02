@@ -86,3 +86,43 @@ nav ul{
 .bb-0{
     border-bottom: 0;
 }
+
+#reset {
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: aqua;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: rgb(39, 212, 62);
+    background-image: none;
+    color: aqua;
+    height: 7px;
+    line-height: 20px;
+    width: 0;
+    position: absolute;
+    background-color: #17e928;
+    transition: width 1s ease-in-out;
+}
+.imagebox {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 10px; 
+    margin-right: 10px; 
+  }
+  
+  .bottom-right-image {
+    width: 345px; 
+    height: auto;
+  }
+  
+  .hidden {
+    display: none;
+  }
