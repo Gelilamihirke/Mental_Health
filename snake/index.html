@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 100;
+        font-family: sans-serif;
+        text-align: center;
+      }
+
+      .overlay button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      .overlay button:hover {
+        background-color: #388e3c;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🐍 Snake Game</h1>
+
+      <div class="controls">
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+          <option value="150">Easy</option>
+          <option value="100" selected>Medium</option>
+          <option value="60">Hard</option>
+        </select>
+        <button id="restartBtn">🔄 Restart</button>
+        <span id="score">Score: 0</span>
+      </div>
+
+      <canvas id="stage" width="520" height="500"></canvas>
+
+      <audio id="eatSound" src="sounds/eat.m4a" preload="auto"></audio>
+      <audio
+        id="gameOverSound"
+        src="sounds/gameover.m4a"
+        preload="auto"
+      ></audio>
+
+      <!-- START SCREEN OVERLAY -->
+      <div id="startScreen" class="overlay" style="display: flex">
+        <h2>Welcome to Snake Game 🐍</h2>
+        <button id="startBtn">▶ Start Game</button>
+      </div>
+
+      <!-- GAME OVER OVERLAY -->
+      <div id="gameOverOverlay" class="overlay">
+        <div id="finalScore">Game Over! Your score: 0</div>
+        <button id="playAgainBtn">🔁 Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
