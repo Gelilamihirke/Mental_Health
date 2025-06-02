@@ -73,3 +73,23 @@ window.onload = function() {
         if (milliseconds > 9){
             attachMilliseconds.innerHTML = milliseconds;      
         } 
+ if (milliseconds > 99) {
+            console.log("seconds");
+            seconds++;		      	
+            attachSeconds.innerHTML = "0" + seconds;
+            milliseconds = 0;
+            attachMilliseconds.innerHTML = "0" + 0;
+        }
+
+        if (seconds > 9){
+            attachSeconds.innerHTML = seconds;
+        }
+
+        
+        if (seconds > 59){
+            console.log("minutes"); 
+            minutes++; 
+            attachMinutes.innerHTML = "0" + minutes; 
+            seconds = 0; 
+            attachSeconds.innerHTML = "0" + 0; 
+        }
