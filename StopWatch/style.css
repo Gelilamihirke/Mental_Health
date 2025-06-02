@@ -63,3 +63,27 @@ button:hover {
     display: flex;
     font-weight: bold;
 }
+
+::selection {
+    color: #FFF;
+    background: #aed1bc;
+}
+
+footer {
+    background: #421804;
+    color: #fff;
+    text-align: center;
+    padding: -10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media screen and (max-width: 700px){
+    .conteudo { padding-top: 40px; margin-left: 40px; margin-right: 40px; }
+}
+
