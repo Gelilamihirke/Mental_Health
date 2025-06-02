@@ -60,3 +60,16 @@ window.onload = function() {
         attachSeconds.innerHTML = seconds; 
         attachMilliseconds.innerHTML = milliseconds;
     }
+
+    function countDuration() {
+        
+        milliseconds++; 
+
+        
+        if(milliseconds < 9){
+            attachMilliseconds.innerHTML = "0" + milliseconds;
+        }
+
+        if (milliseconds > 9){
+            attachMilliseconds.innerHTML = milliseconds;      
+        } 
