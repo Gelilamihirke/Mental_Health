@@ -12,3 +12,23 @@ body {
     background: url('pics/w1.jpg') center/cover no-repeat;
     background-size: cover;
 }
+nav {
+    background: black;
+    padding: 15px;
+    /* position: sticky; */
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+nav h1 {
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
