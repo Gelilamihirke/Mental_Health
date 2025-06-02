@@ -36,3 +36,27 @@ window.onload = function() {
      
         clearInterval(interval);
     }
+
+    
+    resetButton.onclick = function() {
+        // Clear the interval	
+        clearInterval(interval);
+
+       
+        hours = "00"; 
+
+        
+        minutes = "00";
+
+        
+        seconds = "00";
+
+        
+        milliseconds = "00";
+
+        
+        attachHours.innerHTML = hours; 
+        attachMinutes.innerHTML = minutes; 
+        attachSeconds.innerHTML = seconds; 
+        attachMilliseconds.innerHTML = milliseconds;
+    }
